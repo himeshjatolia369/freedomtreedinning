@@ -1,8 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-
+const mongoose = require("mongoose")
 const productRoutes = require("./routes/productRoutes");
 
+mongoose.connect("mongodb://127.0.0.1:27017/collegeproject")
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.error(err))
 
 const app = express();
 app.use("/images", express.static("public/images"));

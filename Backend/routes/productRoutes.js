@@ -1,22 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const products = require("../data/products");
+const Product = require("../module/Product");
 
 // ✅ GET ALL PRODUCTS
-router.get("/", (req, res) => {
-  res.json(products);
+router.get("/", async(req, res) => {
+  const products = await Product.find()
+  res.json(products)
 });
 
+
+
 // ✅ GET SINGLE PRODUCT BY ID
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const product = products.find((p) => p.id === id);
-
+router.get("/:id", async(req, res) => {
+  const product = await Product.findById(req.params.id)
   if (!product) {
-    return res.status(404).json({ message: "Product not found" });
+    return res.status(404).json({ message: "Product not found" })
   }
-
-  res.json(product);
+  res.json(product)
 });
 
 module.exports = router;

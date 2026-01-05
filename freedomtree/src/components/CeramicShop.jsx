@@ -4,6 +4,7 @@ import { ChevronDown, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { fetchProducts } from "../services/productApi";
 import ShopByCategory from "./ShopByCategory";
+import ProductCard from "./ProductCard";
 
 
 import "../App.css"
@@ -398,12 +399,7 @@ const CeramicShop = () => {
             </div>
 
 
-
-
-
-
-
-
+ 
 
             {/* MATERIAL */}
             <div className="border-t py-4">
@@ -634,16 +630,16 @@ const CeramicShop = () => {
                   }
 
                   className="px-8 py-3
-    min-h-[48px]
-    border border-black
-    text-[16px]
-    font-medium
-      tracking-wide
-    leading-none
-    bg-white text-black
-    hover:bg-black hover:text-white
-    transition
-    focus:outline-none focus:ring-0"
+                  min-h-[48px]
+                 border border-black
+                 text-[16px]
+                 font-medium
+                 tracking-wide
+                 leading-none
+                bg-white text-black
+                 hover:bg-black hover:text-white
+                 transition
+                  focus:outline-none focus:ring-0"
                 >
                   {item}
                 </button>
@@ -669,19 +665,10 @@ const CeramicShop = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {sortedProducts.map((product) => (
-              <div key={product.id} onClick={() => navigate(`/product/${product.id}`)} className="cursor-pointer">
-                <div className="aspect-square bg-gray-100 mb-3 overflow-hidden">
-                  <img
-                    src={`http://localhost:5000${product.images?.[0]}`}
-                    alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition"
-                  />
-                </div>
-                <h3 className="text-sm font-light">{product.name}</h3>
-                <p className="text-sm italic text-gray-600">
-                  Rs. {product.price}
-                </p>
-              </div>
+                <ProductCard
+                key={product._id || product.id}
+                product={product}
+                />
             ))}
           </div>
         </main>
