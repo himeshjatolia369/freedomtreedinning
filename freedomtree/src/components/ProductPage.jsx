@@ -13,7 +13,7 @@ const ProductPage = () => {
   
 const [product, setProduct] = useState(null);
 
-
+const BACKEND_URL="https://freedomtreedinning-backend.onrender.com"
 
 useEffect(() => {
   const loadProduct = async () => {
@@ -32,7 +32,7 @@ useEffect(() => {
 
 useEffect(() => {
   if (product?.images?.length>0) {
-    setActiveImage(`http://localhost:5000${product.images[0]}`);
+    setActiveImage(`${BACKEND_URL}${product.images[0]}`);
   }
 }, [product]);
   
@@ -66,9 +66,9 @@ useEffect(() => {
             {product.images.map((img) => (
               <img
                 key={img}
-                src={`http://localhost:5000${img}`}
+                src={`${BACKEND_URL}${img}`}
                 alt={product.name}
-                onClick={() => setActiveImage(`http://localhost:5000${img}`)}
+                onClick={() => setActiveImage(`${BACKEND_URL}${img}`)}
                 className={`w-[76px] h-[115px] object-cover cursor-pointer border ${
                   activeImage === img ? "border-black" : "border-transparent"
                 }`}
