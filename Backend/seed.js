@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
 const Product = require("./module/Product")
+require("dotenv").config();
 
-mongoose.connect("mongodb://127.0.0.1:27017/collegeproject")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected for seeding"))
   .catch(err => console.error(err))
 
