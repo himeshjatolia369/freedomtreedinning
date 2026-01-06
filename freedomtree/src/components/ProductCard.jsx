@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
     >
       <div className="aspect-square bg-gray-100 mb-3 overflow-hidden">
         <img
-          src={`http://localhost:5000${product.images?.[0]}`}
+          src={`https://freedomtreedinning-backend.onrender.com${product.images?.[0]}`}
           alt={product.name}
           className="w-full h-full object-cover hover:scale-105 transition"
         />
