@@ -15,9 +15,9 @@ const products = [
     images: [
       "/images/dinnerware/bombay-dinner-plate-1.jpg",
       "/images/dinnerware/bombay-dinner-plate-2.jpg",
-      "/images/dinnerware/bombay-dinner-plate-2.jpg",
-      "/images/dinnerware/bombay-dinner-plate-2.jpg",
-      "/images/dinnerware/bombay-dinner-plate-2.jpg"
+      "/images/dinnerware/bombay-dinner-plate-3.jpg",
+      "/images/dinnerware/bombay-dinner-plate-4.jpg",
+      "/images/dinnerware/bombay-dinner-plate-5.jpg"
     ],
     category: "Dinnerware",
     shopByCategory: "Plates and Platters",
