@@ -1,10 +1,20 @@
-import { Search, User, ShoppingBag, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import {
+  Search,
+  User,
+  ShoppingBag,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       {/* TOP SALE BAR */}
-      <div className="bg-black text-white text-center text-sm py-2">
+      <div className="bg-black text-white text-center text-xs sm:text-sm py-2">
         Seasons Settings Sale –{" "}
         <span className="underline cursor-pointer">
           Ceramic Dinnerware From 20% OFF
@@ -13,10 +23,10 @@ const Navbar = () => {
 
       {/* MAIN HEADER */}
       <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
-          {/* SEARCH */}
-          <div className="flex items-center border px-3 py-2 w-72">
+          {/* LEFT: SEARCH (Desktop only) */}
+          <div className="hidden lg:flex items-center border px-3 py-2 w-72">
             <input
               type="text"
               placeholder="Search our store"
@@ -25,24 +35,31 @@ const Navbar = () => {
             <Search size={18} />
           </div>
 
-          {/* LOGO */}
-          <div className="text-3xl font-extrabold tracking-wide">
+          {/* CENTER: LOGO */}
+          <div className="text-2xl lg:text-3xl font-extrabold tracking-wide">
             FREEDOM <span className="font-black">TREE</span>
           </div>
 
-          {/* RIGHT ICONS */}
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-1 cursor-pointer">
+          {/* RIGHT: ICONS */}
+          <div className="flex items-center gap-4 text-sm">
+            <div className="hidden lg:flex items-center gap-1 cursor-pointer">
               INDIA - INR <ChevronDown size={16} />
             </div>
             <User className="cursor-pointer" />
             <ShoppingBag className="cursor-pointer" />
-          </div>
 
+            {/* HAMBURGER (Mobile only) */}
+            <button
+              className="lg:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
-        {/* INFO LINKS */}
-        <div className="text-sm text-center py-3 border-t">
+        {/* INFO LINKS (Desktop only) */}
+        <div className="hidden lg:block text-sm text-center py-3 border-t">
           <span className="mx-3 cursor-pointer">15 YEAR JOURNEY</span> |
           <span className="mx-3 cursor-pointer">OUR WORLD</span> |
           <span className="mx-3 cursor-pointer">OUR STORES</span> |
@@ -52,8 +69,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* CATEGORY NAVBAR */}
-      <div className="bg-[#4b5563]">
+      {/* CATEGORY NAVBAR (Desktop only) */}
+      <div className="hidden lg:block bg-[#4b5563]">
         <div className="max-w-7xl mx-auto px-6 flex items-center text-white">
 
           {/* NEST BADGE */}
@@ -74,9 +91,33 @@ const Navbar = () => {
             <span className="cursor-pointer">Gifting</span>
             <span className="cursor-pointer">Sale</span>
           </div>
-
         </div>
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white border-b shadow-md">
+          <div className="flex flex-col gap-4 p-4 font-semibold">
+            <span>Furniture</span>
+            <span>Furnishing</span>
+            <span>Dining</span>
+            <span>Decor & Lights</span>
+            <span>Clothing</span>
+            <span>Gifting</span>
+            <span>Sale</span>
+
+            {/* Mobile Search */}
+            <div className="flex items-center border px-3 py-2 mt-4">
+              <input
+                type="text"
+                placeholder="Search our store"
+                className="outline-none w-full text-sm"
+              />
+              <Search size={18} />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

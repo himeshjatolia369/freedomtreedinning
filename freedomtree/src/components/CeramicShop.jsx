@@ -193,7 +193,7 @@ const CeramicShop = () => {
   useEffect(() => {
     const loadProducts = async () => {
       const data = await fetchProducts();
-      console.log("API PRODUCTS:", data); // 👈 ADD THIS
+      console.log("API PRODUCTS:", data); // 
       setProducts(data);
       setLoading(false);
     };
@@ -273,9 +273,9 @@ const CeramicShop = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      <div className="flex">
+      <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr]"> 
         {/* ==================== SIDEBAR ==================== */}
-        <aside className="w-80 bg-white sticky top-[160px] h-[calc(100vh-160px)] flex flex-col">
+        <aside className="hidden lg:flex w-80 bg-white sticky top-[160px] h-[calc(100vh-160px)] flex-col">
           {/* Static Header */}
           <div className="px-6 pt-8 pb-4 shrink-0">
             <div className="flex items-center gap-2 text-sm mb-6">
@@ -585,7 +585,7 @@ const CeramicShop = () => {
         </aside>
 
         {/* ==================== MAIN CONTENT ==================== */}
-        <main className="flex-1 p-6">
+        <main className="p-4 lg:p-6">
           {/* ======= COLLECTION HEADER ======= */}
           <div className="max-w-4xl mb-10">
             <h1 className="text-3xl font-semibold mb-4">
