@@ -32,7 +32,11 @@ const products = [
     name: "Bombay City Ceramic Side Plate",
     price: 680,
     images: [
-      "/images/dinnerware/bombay-side-plate-1.jpg"
+      "/images/dinnerware/bombay-side-plate-1.jpg",
+      "/images/dinnerware/bombay-side-plate-2.jpg",
+      "/images/dinnerware/bombay-side-plate-3.jpg",
+      "/images/dinnerware/bombay-side-plate-4.jpg",
+      "/images/dinnerware/bombay-side-plate-5.jpg",
     ],
     category: "Dinnerware",
     shopByCategory: "Plates and Platters",
@@ -47,7 +51,10 @@ const products = [
     name: "Bombay City Small Straight Serving Bowl",
     price: 1280,
     images: [
-      "/images/serveware/bombay-small-bowl.jpg"
+      "/images/serveware/bombay-small-bowl1.jpg",
+      "/images/serveware/bombay-small-bowl2.jpg",
+      "/images/serveware/bombay-small-bowl3.jpg",
+      "/images/serveware/bombay-small-bowl4.jpg",
     ],
     category: "Serveware",
     shopByCategory: "Bowls",
@@ -62,7 +69,10 @@ const products = [
     name: "Bombay City Large Straight Serving Bowl",
     price: 1480,
     images: [
-      "/images/serveware/bombay-large-bowl.jpg"
+      "/images/serveware/bombay-large-bowl1.jpg",
+      "/images/serveware/bombay-large-bowl2.jpg",
+      "/images/serveware/bombay-large-bowl3.jpg",
+      "/images/serveware/bombay-large-bowl4.jpg",
     ],
     category: "Serveware",
     shopByCategory: "Bowls",
@@ -79,7 +89,10 @@ const products = [
     name: "Color Pop Coral Ceramic Ramekin (Set of 2)",
     price: 800,
     images: [
-      "/images/bakeware/coral-ramekin.jpg"
+      "/images/bakeware/coral-ramekin1.jpg",
+      "/images/bakeware/coral-ramekin2.jpg",
+      "/images/bakeware/coral-ramekin3.jpg",
+      "/images/bakeware/coral-ramekin4.jpg",
     ],
     category: "Cake and Bakeware",
     shopByCategory: "Bowls",
@@ -94,7 +107,10 @@ const products = [
     name: "Color Pop Black & Mint Ramekin (Set of 2)",
     price: 800,
     images: [
-      "/images/bakeware/black-mint-ramekin.jpg"
+      "/images/bakeware/black-mint-ramekin1.jpg",
+      "/images/bakeware/black-mint-ramekin2.jpg",
+      "/images/bakeware/black-mint-ramekin3.jpg",
+      "/images/bakeware/black-mint-ramekin4.jpg",
     ],
     category: "Cake and Bakeware",
     shopByCategory: "Bowls",
@@ -111,7 +127,11 @@ const products = [
     name: "Montane Ceramic Oval Platter",
     price: 2280,
     images: [
-      "/images/serveware/montane-oval-platter.jpg"
+      "/images/serveware/montane-oval-platter1.jpg",
+      "/images/serveware/montane-oval-platter2.jpg",
+      "/images/serveware/montane-oval-platter3.jpg",
+      "/images/serveware/montane-oval-platter4.jpg",
+      "/images/serveware/montane-oval-platter5.jpg",
     ],
     category: "Serveware",
     shopByCategory: "Plates and Platters",
@@ -128,7 +148,10 @@ const products = [
     name: "Phases Ceramic Center Piece",
     price: 2480,
     images: [
-      "/images/table-accents/phases-centerpiece.jpg"
+      "/images/table-accents/phases-centerpiece1.jpg",
+      "/images/table-accents/phases-centerpiece2.jpg",
+      "/images/table-accents/phases-centerpiece3.jpg",
+      "/images/table-accents/phases-centerpiece4.jpg",
     ],
     category: "Table Accents",
     shopByCategory: "Center Piece",
@@ -143,7 +166,9 @@ const products = [
     name: "Oval Illusion Sheesham Wood Center Piece",
     price: 3480,
     images: [
-      "/images/table-accents/illusion-wood.jpg"
+      "/images/table-accents/illusion-wood1.jpg",
+      "/images/table-accents/illusion-wood2.jpg",
+      "/images/table-accents/illusion-wood3.jpg",
     ],
     category: "Table Accents",
     shopByCategory: "Center Piece",
@@ -160,7 +185,9 @@ const products = [
     name: "Keora Stripers Honey Bloom Dinner Napkin (Set of 4)",
     price: 1480,
     images: [
-      "/images/table-linen/keora-napkin.jpg"
+      "/images/table-linen/keora-napkin1.jpg",
+      "/images/table-linen/keora-napkin2.jpg",
+      "/images/table-linen/keora-napkin3.jpg",
     ],
     category: "Table Linens",
     shopByCategory: "Table linen",
@@ -175,7 +202,9 @@ const products = [
     name: "Gypsy Rose Aqua Blue Dinner Napkin (Set of 4)",
     price: 1280,
     images: [
-      "/images/table-linen/gypsy-blue.jpg"
+      "/images/table-linen/gypsy-blue1.jpg",
+      "/images/table-linen/gypsy-blue2.jpg",
+      "/images/table-linen/gypsy-blue3.jpg",
     ],
     category: "Table Linens",
     shopByCategory: "Table linen",
